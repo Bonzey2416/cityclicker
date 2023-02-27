@@ -419,7 +419,7 @@ City.prototype.data = function() {
 };
 
 City.prototype.date = function() {
-  return new Date(this.day * 24 * 60 * 60 * 1000).toDateString();
+  return new Date(this.day * 24 * 60 * 60 * 100).toDateString();
 }
 
 City.prototype.report = function() {
@@ -557,7 +557,7 @@ var time = function() {
   var start = new Date();
   city.update(true);
   city.day++;
-  setTimeout(time, Math.max(1000 - (new Date() - start), 100));
+  setTimeout(time, Math.max(100 - (new Date() - start), 10));
 };
-setTimeout(time, 1000);
+setTimeout(time, 100);
 })();
